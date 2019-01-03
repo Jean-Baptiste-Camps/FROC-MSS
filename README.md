@@ -24,17 +24,31 @@ Unicode NFD normalisation has been applied on the ground-truth text.
 
 ### Summary and C.E.R.
 
-The root folder contains a vanilla Kraken model (``), trained with default
-settings and without any additional data (and no artificial noised data).
+The root folder contains a vanilla Kraken model (`model_45807.mlmodel`), 
+trained with default settings and without any additional data (e.g. no artificial noised data).
 
 It achieved a C.E.R. of:
 
-- ** % ** on test
-- ** % ** globally
-
-Most frequent errors concern spacing. <!-- CER without spacing -->
+- ** 91.90 % ** on validation data (randomly chosen 10% of available data that were not used for training);
+- ** 93.47 % ** globally.
 
 ### Most frequent confusions
+
+Here are the 12 most frequent confusions:
+
+    Errors	Correct-Generated
+    2459	{ 0xa } - {  }
+    755	{ SPACE } - {  }
+    334	{ ı } - {  }
+    248	{ e } - {  }
+    219	{ COMBINING ACUTE ACCENT } - {  }
+    202	{ n } - {  }
+    197	{  } - { SPACE }
+    183	{ COMBINING TILDE } - {  }
+    166	{ l } - {  }
+    162	{ u } - {  }
+    159	{ . } - {  }
+    155	{ r } - {  }
 
 ## List of manuscripts
 
@@ -63,10 +77,3 @@ at _jbcamps at hotmail.com_ .
 
 Jean-Baptiste Camps (éd.), _FROC-MSS: Old French and Old Occitan Medieval Manuscripts HTR Data and Models_, Paris: École nationale des chartes (PSL), 2018, [https://github.com/Jean-Baptiste-Camps/FROC-MSS](https://github.com/Jean-Baptiste-Camps/FROC-MSS).
 
-<!-- 
-[3.5532] alphabet mismatch {'U', '/', '>', '&', '\uf127', ';', '<', 'P', 'K', '̈', '⸿', 'ͧ'}
-[1057.9168] alphabet mismatch {'ͧ', 'V', 'U', '?', '<', '>', 'K', ';', 'P', '̈', "'", '/', '&', '\uf127', '̧', '⸿'} 
-[795.2094] alphabet mismatch {'K', '>', '/', '&', 'y', 'P', '<', 'ͦ', '̈', 'U', '̧', 'ꝓ', ';', '⸿', 'ͧ', '\uf127'} 
-
-alphabet mismatch {'/', '&', 'w', 'P', '̧', '\uf127', "'", 'y', '>', 'x', 'ͧ', '⸿', ']', '<', ';', 'U', '̈', '?', 'K', 'ȷ'} 
--->
