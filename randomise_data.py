@@ -9,6 +9,8 @@ if __name__ == '__main__':
     val = open("val.txt", "w")
     test = open("test.txt", "w")
 
+    random.seed('1214')
+
     for i in sys.argv[1:]:
         monRand = random.random()
         if monRand <= 0.1:
