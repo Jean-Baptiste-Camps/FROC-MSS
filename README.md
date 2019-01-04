@@ -29,8 +29,8 @@ trained with default settings and without any additional data (e.g. no artificia
 
 It achieved a C.E.R. of:
 
-- ** 91.90 % ** on validation data (randomly chosen 10% of available data that were not used for training);
-- ** 93.47 % ** globally.
+- ** 8.1 % ** on validation data (randomly chosen 10% of available data that were not used for training);
+- ** 6.53 % ** globally.
 
 ### Most frequent confusions
 
@@ -59,7 +59,7 @@ The data comes from partial allographetic transcription of the following mss.:
 - Cologny-Genève, fondation Martin-Bodmer, cod. Bodm. 168 (XIII 3/3, anglo-norman gothic _textualis_; _Chanson d'Otinel_); 1908 lines.
 - Oxford, Bodleian Library, Digby 23 (XII 1/2, anglo-norman _praegothica_; _Chanson de Roland_); 564 lines.
 
-For these transcriptions, see: Jean-Baptiste Camps, _La `Chanson d’Otinel’: édition complète du corpus manuscrit et prolégomènes à l’édition critique_, PhD thesis, dir. Dominique Boutet, Paris-Sorbonne, 2016,  DOI[https://doi.org/10.5281/zenodo.1116735](10.5281/zenodo.1116735).
+For these transcriptions, see: Jean-Baptiste Camps, _La `Chanson d’Otinel’: édition complète du corpus manuscrit et prolégomènes à l’édition critique_, PhD thesis, dir. Dominique Boutet, Paris-Sorbonne, 2016,  DOI: [https://doi.org/10.5281/zenodo.1116735](10.5281/zenodo.1116735).
 
 <!-- TODO: à compléter avec les autres manuscrits: Vatican, Mende, …  -->
 
