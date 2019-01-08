@@ -24,35 +24,58 @@ Unicode NFD normalisation has been applied on the ground-truth text.
 
 ### Summary and C.E.R.
 
-The root folder contains a vanilla Kraken model (`model_45807.mlmodel`), 
+The root folder contains a vanilla Kraken model (`model_froc.mlmodel`), 
 trained with default settings and without any additional data (e.g. no artificial noised data).
+
+Data was randomly divided in 80\% for training (`train.txt`), 10\% for in-training 
+validation (`val.txt`) and 10\% for final testing of the model (`test.txt`).
 
 It achieved a C.E.R. of:
 
-- ** 8.1 % ** on validation data (randomly chosen 10% of available data that were not used for training);
-- ** 6.53 % ** globally.
+- ** 8.11 % ** on validation data (7.03% ignoring spaces);
+- ** 7.83 % ** on test data (6.92% ignoring spaces).
 
-### Most frequent confusions
+### Errors and most frequent confusions on test data
 
-Here are the 12 most frequent confusions:
+There were 13540 characters and 1061 errors on test data.
 
-    Errors	Correct-Generated
-    2459	{ 0xa } - {  }
-    755	{ SPACE } - {  }
-    334	{ ı } - {  }
-    248	{ e } - {  }
-    219	{ COMBINING ACUTE ACCENT } - {  }
-    202	{ n } - {  }
-    197	{  } - { SPACE }
-    183	{ COMBINING TILDE } - {  }
-    166	{ l } - {  }
-    162	{ u } - {  }
-    159	{ . } - {  }
-    155	{ r } - {  }
+Globally, the error are as follow: 
+
+- 536 characters from the ground truth were not predicted by the model;
+- 132 characters absent from the ground truth were wrongly predicted;
+- 393 character substitutions.
+
+
+The most frequent confusions concerned spacing.
+
+The 20 most frequent confusions are:
+
+    Errors	Ground Truth-Prediction
+    70	{ SPACE } - {  }
+    54	{  } - { SPACE }
+    48	{ ı } - {  }
+    43	{ n } - {  }
+    43	{ COMBINING ACUTE ACCENT } - {  }
+    27	{ e } - {  }
+    24	{ l } - {  }
+    24	{ u } - {  }
+    21	{ . } - {  }
+    20	{ u } - { n }
+    18	{ ſ } - {  }
+    18	{ a } - {  }
+    17	{ r } - {  }
+    14	{ t } - {  }
+    13	{ COMBINING TILDE } - {  }
+    13	{  } - { ı }
+    12	{ o } - { e }
+    12	{ o } - {  }
+    12	{ ı } - { m }
+    11	{ e } - { c }
+
 
 ## List of manuscripts
 
-The data comes from partial allographetic transcription of the following mss.:
+The data comes from partial allographetic transcription of the following mss:
 
 - Clermont-Ferrand, archives départementales, 1F2 (XIII 1/3, anglo-norman _praegothica_ script; _Chanson d'Aspremont_); 52 lines.
 - Paris, Bibliothèque nationale de France, fr. 854 (XIII 4/4, Venice or Venetian area; gothic _textualis_;  occitan chansonnier _I_); 1112 lines.
@@ -65,7 +88,7 @@ For these transcriptions, see: Jean-Baptiste Camps, _La `Chanson d’Otinel’: 
 
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence Creative Commons Attribution 4.0 International</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licence Creative Commons Attribution 4.0 International</a>.
 
 ## Contribute
 
